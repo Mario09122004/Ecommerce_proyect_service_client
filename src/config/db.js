@@ -6,9 +6,10 @@ const sequelize = new Sequelize(
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
-        host: process.env.DB_HOST, //Dreccionamiento del host por medio de variables e entorno
+        host: process.env.DB_HOST,
+        port: parseInt(process.env.DB_PORT),
         dialect: 'mysql',
-        logging: false, //Activarlo para ver las consultas SQL
+        logging: false,
     }
 );
 
